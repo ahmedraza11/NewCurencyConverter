@@ -124,19 +124,23 @@ namespace CurrencyConverter.CurrencyConverter_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[5];
+            _typeNameTable = new string[7];
             _typeNameTable[0] = "CurrencyConverter.Convert_page";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "CurrencyConverter.MainPage";
-            _typeNameTable[4] = "CurrencyConverter.Modify";
+            _typeNameTable[3] = "CurrencyConverter.Header";
+            _typeNameTable[4] = "CurrencyConverter.MainPage";
+            _typeNameTable[5] = "CurrencyConverter.Modify";
+            _typeNameTable[6] = "CurrencyConverter.Splash";
 
-            _typeTable = new global::System.Type[5];
+            _typeTable = new global::System.Type[7];
             _typeTable[0] = typeof(global::CurrencyConverter.Convert_page);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::CurrencyConverter.MainPage);
-            _typeTable[4] = typeof(global::CurrencyConverter.Modify);
+            _typeTable[3] = typeof(global::CurrencyConverter.Header);
+            _typeTable[4] = typeof(global::CurrencyConverter.MainPage);
+            _typeTable[5] = typeof(global::CurrencyConverter.Modify);
+            _typeTable[6] = typeof(global::CurrencyConverter.Splash);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -172,8 +176,10 @@ namespace CurrencyConverter.CurrencyConverter_XamlTypeInfo
         }
 
         private object Activate_0_Convert_page() { return new global::CurrencyConverter.Convert_page(); }
-        private object Activate_3_MainPage() { return new global::CurrencyConverter.MainPage(); }
-        private object Activate_4_Modify() { return new global::CurrencyConverter.Modify(); }
+        private object Activate_3_Header() { return new global::CurrencyConverter.Header(); }
+        private object Activate_4_MainPage() { return new global::CurrencyConverter.MainPage(); }
+        private object Activate_5_Modify() { return new global::CurrencyConverter.Modify(); }
+        private object Activate_6_Splash() { return new global::CurrencyConverter.Splash(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -199,15 +205,27 @@ namespace CurrencyConverter.CurrencyConverter_XamlTypeInfo
                 xamlType = new global::CurrencyConverter.CurrencyConverter_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  CurrencyConverter.MainPage
+            case 3:   //  CurrencyConverter.Header
                 userType = new global::CurrencyConverter.CurrencyConverter_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_MainPage;
+                userType.Activator = Activate_3_Header;
                 xamlType = userType;
                 break;
 
-            case 4:   //  CurrencyConverter.Modify
+            case 4:   //  CurrencyConverter.MainPage
                 userType = new global::CurrencyConverter.CurrencyConverter_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_Modify;
+                userType.Activator = Activate_4_MainPage;
+                xamlType = userType;
+                break;
+
+            case 5:   //  CurrencyConverter.Modify
+                userType = new global::CurrencyConverter.CurrencyConverter_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_5_Modify;
+                xamlType = userType;
+                break;
+
+            case 6:   //  CurrencyConverter.Splash
+                userType = new global::CurrencyConverter.CurrencyConverter_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_6_Splash;
                 xamlType = userType;
                 break;
             }

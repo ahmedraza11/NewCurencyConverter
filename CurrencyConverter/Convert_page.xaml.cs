@@ -40,8 +40,8 @@ namespace CurrencyConverter
             this.InitializeComponent();
             
             table();
-            rates();
-          // CurrencyData();
+           rates();
+           //CurrencyData();
           
              //ddata();
           
@@ -155,7 +155,7 @@ namespace CurrencyConverter
 
         private async void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            try
+             try
             {
                 float text1 = Convert.ToInt32(txt_A.Text);
                 float res, result;
@@ -217,27 +217,21 @@ namespace CurrencyConverter
         }
         public async void rates()
         {
-            try
+            string vad = "";
+            
+            int i=0;
+            var val = await con.QueryAsync<currency>("select value from currency where value >= 0;");
+            foreach (var va in val)
             {
-                var rat = await con.QueryAsync<currency>("select * from currency where C_Name = 'China';");
-                    //,'Euro','Indonesia','Soomalia','Pakistani','Indian','Riyal','Darham';");
-                string[] data = new string[9];
-               
-                foreach (var tem in rat)
-                {
-                    
-                        
-                }
-            }
+                TChina.Text = va.value.ToString();
+                TEgypt.Text = va.value.ToString();
 
-            catch (Exception ea)
-            {
-                MessageDialog dd = new MessageDialog("Some Error accoured",ea.Message);
-                dd.ShowAsync();
+               // List.items.add(va.C_Name +"                              "+va.);
             }
-            }
-          }
-
         }
+     }
+ }
+
+        
     
 

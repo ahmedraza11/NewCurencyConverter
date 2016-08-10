@@ -40,3 +40,13 @@ C:\Users\Aptech\documents\visual studio 2013\Projects\CurrencyConverter\Currency
 C:\Users\Aptech\documents\visual studio 2013\Projects\CurrencyConverter\CurrencyConverter\obj\Debug\Modify.g.cs
 C:\Users\Aptech\documents\visual studio 2013\Projects\CurrencyConverter\CurrencyConverter\obj\Debug\Modify.xaml
 C:\Users\Aptech\documents\visual studio 2013\Projects\CurrencyConverter\CurrencyConverter\obj\Debug\Modify.xbf
+C:\Users\Aptech\documents\visual studio 2013\Projects\CurrencyConverter\CurrencyConverter\bin\Debug\Splash.xbf
+C:\Users\Aptech\documents\visual studio 2013\Projects\CurrencyConverter\CurrencyConverter\obj\Debug\Splash.g.i.cs
+C:\Users\Aptech\documents\visual studio 2013\Projects\CurrencyConverter\CurrencyConverter\obj\Debug\Splash.g.cs
+C:\Users\Aptech\documents\visual studio 2013\Projects\CurrencyConverter\CurrencyConverter\obj\Debug\Splash.xaml
+C:\Users\Aptech\documents\visual studio 2013\Projects\CurrencyConverter\CurrencyConverter\obj\Debug\Splash.xbf
+C:\Users\Aptech\documents\visual studio 2013\Projects\CurrencyConverter\CurrencyConverter\obj\Debug\Header.g.i.cs
+C:\Users\Aptech\documents\visual studio 2013\Projects\CurrencyConverter\CurrencyConverter\obj\Debug\Header.g.cs
+C:\Users\Aptech\documents\visual studio 2013\Projects\CurrencyConverter\CurrencyConverter\obj\Debug\Header.xaml
+C:\Users\Aptech\documents\visual studio 2013\Projects\CurrencyConverter\CurrencyConverter\obj\Debug\Header.xbf
+C:\Users\Aptech\documents\visual studio 2013\Projects\CurrencyConverter\CurrencyConverter\bin\Debug\Header.xbf
