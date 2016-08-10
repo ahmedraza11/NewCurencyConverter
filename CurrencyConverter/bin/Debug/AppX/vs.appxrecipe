@@ -23,7 +23,7 @@
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Aptech\documents\visual studio 2013\Projects\CurrencyConverter\CurrencyConverter\bin\Debug\CurrencyConverter.exe">
       <PackagePath>CurrencyConverter.exe</PackagePath>
-      <Modified>2016-08-10T12:03:51.348</Modified>
+      <Modified>2016-08-10T13:07:17.146</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\SQLite.WinRT81\3.13.0\Redist\Debug\x64\sqlite3.dll">
       <PackagePath>sqlite3.dll</PackagePath>
@@ -212,7 +212,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Aptech\documents\visual studio 2013\Projects\CurrencyConverter\CurrencyConverter\bin\Debug\Convert_page.xbf">
       <PackagePath>Convert_page.xbf</PackagePath>
-      <Modified>2016-08-10T11:52:23.962</Modified>
+      <Modified>2016-08-10T13:07:16.658</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Aptech\documents\visual studio 2013\Projects\CurrencyConverter\CurrencyConverter\bin\Debug\Header.xbf">
       <PackagePath>Header.xbf</PackagePath>
@@ -220,11 +220,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Aptech\documents\visual studio 2013\Projects\CurrencyConverter\CurrencyConverter\bin\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2016-08-08T06:30:37.243</Modified>
+      <Modified>2016-08-10T13:07:16.658</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Aptech\documents\visual studio 2013\Projects\CurrencyConverter\CurrencyConverter\bin\Debug\Modify.xbf">
       <PackagePath>Modify.xbf</PackagePath>
-      <Modified>2016-08-08T06:30:37.244</Modified>
+      <Modified>2016-08-10T13:07:16.659</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Aptech\documents\visual studio 2013\Projects\CurrencyConverter\CurrencyConverter\bin\Debug\Splash.xbf">
       <PackagePath>Splash.xbf</PackagePath>

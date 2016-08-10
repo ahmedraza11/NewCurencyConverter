@@ -6,6 +6,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.TopAppBar>
+        <AppBar>
+            <AppBarButton Icon="Back" Label="Back" Click="AppBarButton_Click">
+                
+            </AppBarButton>
+        </AppBar>
+    </Page.TopAppBar>
 
     <Grid>
         <Grid.ColumnDefinitions>

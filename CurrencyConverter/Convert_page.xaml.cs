@@ -226,7 +226,7 @@ namespace CurrencyConverter
                 foreach (var va in val)
                 {
                     
-                    list.Items.Add(va.C_Name + "                            " + va.value);
+                    list.Items.Add("  "+va.C_Name + "  <===========>  " + va.value);
 
                 }
             }
@@ -235,6 +235,11 @@ namespace CurrencyConverter
                 MessageDialog da = new MessageDialog("Some error accured in Forex rates view.", er.Message);
                 da.ShowAsync();
             }
+        }
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
      }
  }

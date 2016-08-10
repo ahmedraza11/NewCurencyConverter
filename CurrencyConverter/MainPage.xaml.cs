@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -70,6 +71,13 @@ namespace CurrencyConverter
         {
             this.Frame.Navigate(typeof(Convert_page));
 
+        }
+
+        private async void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MessageDialog da = new MessageDialog("","ThankYou For Using Currency Converter pro.");
+            await  da.ShowAsync();
+            App.Current.Exit();
         }
     }
 }

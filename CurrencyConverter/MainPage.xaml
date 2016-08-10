@@ -36,6 +36,7 @@
                 </DataTemplate>
             </GridView.ItemTemplate>
         </GridView>
-        <Button Content="Start Convert Currency" Click="Button_Click" FontSize="22" FontWeight="SemiBold" Margin="1057,607,0,107" Height="54"></Button>
+        <Button Content="Start Convert Currency" Click="Button_Click" FontSize="22" FontWeight="SemiBold" Margin="967,589,0,125" Height="54"></Button>
+        <Button Content="Exit" Click="Button_Click_1" FontSize="22" FontWeight="SemiBold" Margin="1248,589,0,125" Height="54" Background="#FFD88827"/>
     </Grid>
 </Page>

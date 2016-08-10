@@ -6,6 +6,11 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.TopAppBar>
+        <AppBar>
+            <AppBarButton Icon="Back" Label="Back" Click="AppBarButton_Click"></AppBarButton>
+        </AppBar>
+    </Page.TopAppBar>
 
     <Grid Margin="0,-10,0,10">
         <Grid.ColumnDefinitions>
@@ -36,36 +41,14 @@
         </Grid.Background>
         <TextBlock Text="Forex Rates Modification" FontSize="32" HorizontalAlignment="Center" Margin="115,48,404,52" Grid.RowSpan="13" Grid.Column="4" Width="349"></TextBlock>
         <TextBlock Text="Forex Rates:" Grid.Column="2" Grid.Row="1" FontSize="32" Margin="10,10,4,30" Grid.ColumnSpan="3" Grid.RowSpan="11" Foreground="#FFFFE806"></TextBlock>
-        <TextBlock Text="China Yen" FontSize="23" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left"  Foreground="#FF92F0BC" Width="95"></TextBlock>
-        <TextBlock Text="Egypt" FontSize="23" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Left" Foreground="#FF92F0BC" Width="155"/>
-        <TextBlock Text="France" FontSize="23" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Left" Foreground="#FF92F0BC" Width="101"></TextBlock>
-        <TextBlock Text="Euro" FontSize="23" Grid.Column="2" Grid.Row="5" HorizontalAlignment="Left" Foreground="#FF92F0BC" Width="46"></TextBlock>
-        <TextBlock Text="Indonasia" FontSize="23" Grid.Column="2" Grid.Row="6" HorizontalAlignment="Left" Foreground="#FF92F0BC" Width="119"></TextBlock>
-        <TextBlock Text="Soomalia" FontSize="23" Grid.Column="2" Grid.Row="7" HorizontalAlignment="Left" Foreground="#FF92F0BC" Width="106"></TextBlock>
-        <TextBlock Text="Pak Rupee" FontSize="23" Grid.Column="2" Grid.Row="8" HorizontalAlignment="Left" Foreground="#FF92F0BC" Width="134"></TextBlock>
-        <TextBlock Text="Indian Rupee" FontSize="23" Grid.Column="2" Grid.Row="9" HorizontalAlignment="Left" Foreground="#FF92F0BC" Width="134"></TextBlock>
-        <TextBlock Text="Saudi Riyal" FontSize="23" Grid.Column="2" Grid.Row="10" HorizontalAlignment="Left" Foreground="#FF92F0BC" Width="119"></TextBlock>
-        <TextBlock Text="Dubai Darham" FontSize="23" Grid.Column="2" Grid.Row="11" HorizontalAlignment="Left" Foreground="#FF92F0BC" Width="146"/>
-
-
-
-        <TextBlock Name="Egypt" Text="104.15" FontSize="23" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Left" Foreground="#FFE4B562" Width="67"></TextBlock>
-        <TextBlock Name="France" Text="104.15" FontSize="23" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Left" Foreground="#FFE4B562" Width="67"></TextBlock>
-        <TextBlock Name="Euro" Text="104.15" FontSize="23" Grid.Column="3" Grid.Row="5" HorizontalAlignment="Left" Foreground="#FFE4B562" Width="67"></TextBlock>
-        <TextBlock Name="Indonasia" Text="104.15" FontSize="23" Grid.Column="3" Grid.Row="6" HorizontalAlignment="Left" Foreground="#FFE4B562" Width="67"></TextBlock>
-        <TextBlock Name="Soomalia" Text="104.15" FontSize="23" Grid.Column="3" Grid.Row="7" HorizontalAlignment="Left" Foreground="#FFE4B562" Width="67"></TextBlock>
-        <TextBlock Name="Pak_Rupee" Text="104.15" FontSize="23" Grid.Column="3" Grid.Row="8" HorizontalAlignment="Left" Foreground="#FFE4B562" Width="67"></TextBlock>
-        <TextBlock Name="Indian_Rupee" Text="104.15" FontSize="23" Grid.Column="3" Grid.Row="9" HorizontalAlignment="Left" Foreground="#FFE4B562" Width="67"></TextBlock>
-        <TextBlock Name="Saudi_Riyal" Text="104.15" FontSize="23" Grid.Column="3" Grid.Row="10" HorizontalAlignment="Left" Foreground="#FFE4B562" Width="67"/>
-        <TextBlock Name="Dubai_Darham" Text="104.15" FontSize="23" Grid.Column="3" Grid.Row="11" HorizontalAlignment="Left" Foreground="#FFE4B562" Width="67"></TextBlock>
-        <TextBlock Name="China" Text="104.15" FontSize="23" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Left" Foreground="#FFE4B562" Width="67" Height="40" VerticalAlignment="Top"></TextBlock>
+        <ListView Name="list1" Height="450" Grid.ColumnSpan="2" Grid.Column="2" Margin="10,62,45,120" Grid.Row="1" Grid.RowSpan="12"/>
         <ListView Grid.Column="4" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" Grid.Row="3" Grid.RowSpan="3" VerticalAlignment="Top" Width="100"/>
         <ListView Grid.Column="4" Name="lst" HorizontalAlignment="Left" Height="474" Grid.Row="1" Grid.RowSpan="11" VerticalAlignment="Top" Width="271" Margin="0,10,0,0" SelectionChanged="ListView_SelectionChanged">
             <StackPanel Width="241">
                 <StackPanel.Background>
                     <SolidColorBrush Color="#FFA3BF87" Opacity="0.3"/>
                 </StackPanel.Background>
-                <Image Source="Assets/US.jpg"  Width="219"/>
+                <Image Source="Assets/France.jpg"  Width="219"/>
             </StackPanel>
 
             <StackPanel Width="241">
@@ -132,9 +115,9 @@
 
         </ListView>
         <TextBlock Name="txtName" Text="Currency Name" FontSize="25" FontWeight="Light" HorizontalAlignment="Center" Margin="325,16,194,-52" Grid.RowSpan="12" Grid.Column="4" Width="349" Grid.Row="1"/>
-        <TextBox Width="150" FontSize="33" Grid.Column="4" Margin="325,62,393,10" Grid.Row="1" Grid.RowSpan="2"/>
+        <TextBox Name="txt_value" Width="150" FontSize="33" Grid.Column="4" Margin="325,62,393,10" Grid.Row="1" Grid.RowSpan="2"/>
         <TextBlock Text="Amount PKR" FontSize="22" FontWeight="SemiLight" Grid.Column="4" Margin="492,3,231,21" Grid.Row="2" Grid.RowSpan="4"/>
-        <Button Content="Set Amount" FontSize="22" Grid.Column="4" Margin="322,10,0,22" Grid.Row="3" Grid.RowSpan="2"/>
+        <Button Content="Set Amount" FontSize="22" Grid.Column="4" Margin="322,10,0,22" Grid.Row="3" Grid.RowSpan="2" Click="Button_Click_2"/>
         <StackPanel Grid.Column="4" HorizontalAlignment="Left" Height="282" Margin="630,0,0,10" Grid.Row="2" Grid.RowSpan="8" VerticalAlignment="Bottom" Width="234">
             <StackPanel.Background>
                 <SolidColorBrush Color="#FFFDFDFD" Opacity="0.15"/>
