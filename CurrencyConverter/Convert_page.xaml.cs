@@ -169,8 +169,8 @@ namespace CurrencyConverter
                     txt_B.Text = Math.Round(result, 2).ToString();
                     opt = "x";
 
-                    MessageDialog md = new MessageDialog("value operator is = "+opt+"", value1.ToString());
-                    await md.ShowAsync();
+                    //MessageDialog md = new MessageDialog("value operator is = "+opt+"", value1.ToString());
+                    //await md.ShowAsync();
                     
 
                 }
@@ -179,9 +179,10 @@ namespace CurrencyConverter
                     result = res / value2;
                     txt_B.Text = Math.Round(result, 2).ToString();
                     opt = "/";
-                    MessageDialog md = new MessageDialog("value operator is = "+opt+"", value1.ToString());
-                    await md.ShowAsync();
+                //    MessageDialog md = new MessageDialog("value operator is = "+opt+"", value1.ToString());
+                //    await md.ShowAsync();
 
+                //
                 }
             }catch(Exception ew){
                  MessageDialog ms = new MessageDialog("Some eror accured", ew.Message);
@@ -217,16 +218,22 @@ namespace CurrencyConverter
         }
         public async void rates()
         {
-            string vad = "";
-            
-            int i=0;
-            var val = await con.QueryAsync<currency>("select value from currency where value >= 0;");
-            foreach (var va in val)
-            {
-                TChina.Text = va.value.ToString();
-                TEgypt.Text = va.value.ToString();
 
-               // List.items.add(va.C_Name +"                              "+va.);
+
+            try
+            {
+                var val = await con.QueryAsync<currency>("select * from currency;");
+                foreach (var va in val)
+                {
+                    
+                    list.Items.Add(va.C_Name + "                            " + va.value);
+
+                }
+            }
+            catch (Exception er)
+            {
+                MessageDialog da = new MessageDialog("Some error accured in Forex rates view.", er.Message);
+                da.ShowAsync();
             }
         }
      }

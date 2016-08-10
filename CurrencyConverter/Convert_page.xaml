@@ -38,29 +38,9 @@
 
         <TextBlock Text="Currency Converter" FontFamily="Calibri" FontSize="35" Margin="78,44,450,0" HorizontalAlignment="Center" FontWeight="Medium" Foreground="Cornsilk" Grid.RowSpan="12" Grid.Column="5" Width="309" Grid.Row="0"></TextBlock>
         <TextBlock Text="Forex Rates:" Grid.Column="1" Grid.Row="1" FontSize="29" Margin="20" Grid.ColumnSpan="4" Grid.RowSpan="11"></TextBlock>
-        <TextBlock  Text="China" FontSize="23" Grid.Column="2" Grid.Row="2" HorizontalAlignment="Left"  Foreground="#FF92F0BC" Width="106"></TextBlock>
-        <TextBlock Text="Egypt" FontSize="23" Grid.Column="2" Grid.Row="3" HorizontalAlignment="Left" Foreground="#FF92F0BC" Width="155"></TextBlock>
-        <TextBlock Text="France" FontSize="23" Grid.Column="2" Grid.Row="4" HorizontalAlignment="Left" Foreground="#FF92F0BC" Width="101"></TextBlock>
-        <TextBlock Text="Euro" FontSize="23" Grid.Column="2" Grid.Row="5" HorizontalAlignment="Left" Foreground="#FF92F0BC" Width="46"></TextBlock>
-        <TextBlock Text="Indonesia" FontSize="23" Grid.Column="2" Grid.Row="6" HorizontalAlignment="Left" Foreground="#FF92F0BC" Width="119"></TextBlock>
-        <TextBlock Text="Soomalia" FontSize="23" Grid.Column="2" Grid.Row="7" HorizontalAlignment="Left" Foreground="#FF92F0BC" Width="106"></TextBlock>
-        <TextBlock Text="Pakistani" FontSize="23" Grid.Column="2" Grid.Row="8" HorizontalAlignment="Left" Foreground="#FF92F0BC" Width="134"></TextBlock>
-        <TextBlock Text="Indian" FontSize="23" Grid.Column="2" Grid.Row="9" HorizontalAlignment="Left" Foreground="#FF92F0BC" Width="108"></TextBlock>
-        <TextBlock Text="Riyal" FontSize="23" Grid.Column="2" Grid.Row="10" HorizontalAlignment="Left" Foreground="#FF92F0BC" Width="110"></TextBlock>
-        <TextBlock Text="Darham" FontSize="23" Grid.Column="2" Grid.Row="11" HorizontalAlignment="Left" Foreground="#FF92F0BC" Width="146"></TextBlock>
-
-
-
-        <TextBlock Name="TChina" Text="" FontSize="23" Grid.Column="3" Grid.Row="2" HorizontalAlignment="Left" Foreground="#FFE4B562" Width="67"></TextBlock>
-        <TextBlock Name="TEgypt" Text="104.15" FontSize="23" Grid.Column="3" Grid.Row="3" HorizontalAlignment="Left" Foreground="#FFE4B562" Width="67"></TextBlock>
-        <TextBlock Name="TFrance" Text="104.15" FontSize="23" Grid.Column="3" Grid.Row="4" HorizontalAlignment="Left" Foreground="#FFE4B562" Width="67"></TextBlock>
-        <TextBlock Name="TEuro" Text="104.15" FontSize="23" Grid.Column="3" Grid.Row="5" HorizontalAlignment="Left" Foreground="#FFE4B562" Width="67"></TextBlock>
-        <TextBlock Name="TIndonesia" Text="104.15" FontSize="23" Grid.Column="3" Grid.Row="6" HorizontalAlignment="Left" Foreground="#FFE4B562" Width="67"></TextBlock>
-        <TextBlock Name="TSoomalia" Text="104.15" FontSize="23" Grid.Column="3" Grid.Row="7" HorizontalAlignment="Left" Foreground="#FFE4B562" Width="67"></TextBlock>
-        <TextBlock Name="TPakistani" Text="104.15" FontSize="23" Grid.Column="3" Grid.Row="8" HorizontalAlignment="Left" Foreground="#FFE4B562" Width="67"></TextBlock>
-        <TextBlock Name="TIndian" Text="104.15" FontSize="23" Grid.Column="3" Grid.Row="9" HorizontalAlignment="Left" Foreground="#FFE4B562" Width="67"></TextBlock>
-        <TextBlock Name="TRiyal"  Text="104.15" FontSize="23" Grid.Column="3" Grid.Row="10" HorizontalAlignment="Left" Foreground="#FFE4B562" Width="67"></TextBlock>
-        <TextBlock Name="TDarham" Text="104.15" FontSize="23" Grid.Column="3" Grid.Row="11" HorizontalAlignment="Left" Foreground="#FFE4B562" Width="67"></TextBlock>
+        <ListView Name="list" FontSize="35" Foreground="Azure" Width="300" Height="400" Grid.ColumnSpan="2" Grid.Column="2" Margin="10,10,34,88" Grid.Row="2" Grid.RowSpan="11">
+        
+        </ListView>
 
         <Button Content="MainPage" FontSize="25" Click="Button_Click" Grid.Column="5" Grid.Row="12" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,10,0" Height="52" Width="147"></Button>
         <Button Content="Modify Rates" FontSize="25" Grid.Column="5" Grid.Row="12" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,10,200,0" Height="52" Width="184" Click="Button_Click_1"></Button>
@@ -77,7 +57,7 @@
             <x:String>Indian</x:String>
             <x:String>Riyal</x:String>
             <x:String>Darham</x:String>
-        
+
 
         </ComboBox>
         <ComboBox SelectionChanged="Combo_B_SelectionChanged" HorizontalAlignment="Left" Name="Combo_B" FontSize="25" VerticalAlignment="Bottom" Width="253" Grid.Column="5" Margin="544,0,0,0" Grid.Row="4" Height="33">
