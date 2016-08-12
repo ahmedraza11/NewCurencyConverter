@@ -129,12 +129,12 @@ namespace CurrencyConverter
                 float value = float.Parse(txt_value.Text);
                 await con.QueryAsync<currency>("Update currency set value = " + value + " where C_Name='" + cur_Name + "';");
                 var syn = new SpeechSynthesizer();
-                SpeechSynthesisStream stream = await syn.SynthesizeTextToStreamAsync(" Currency Updated!" + cur_Name + " Sucessfully Updated");
+                SpeechSynthesisStream stream = await syn.SynthesizeTextToStreamAsync(" Currency Updated!" + cur_Name + "  Currency Sucessfully Updated");
                 MediaElement ele = new MediaElement();
                 ele.SetSource(stream, stream.ContentType);
                 ele.Play();
 
-                MessageDialog da = new MessageDialog("(" + cur_Name + ") Sucessfully Updated.", "Currency Update");
+                MessageDialog da = new MessageDialog("(" + cur_Name + ") Currency Sucessfully Updated.", "Currency Update");
                 await da.ShowAsync();
                 rate();
             }

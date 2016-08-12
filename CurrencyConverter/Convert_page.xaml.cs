@@ -39,11 +39,11 @@ namespace CurrencyConverter
         public  Convert_page()
         {
             this.InitializeComponent();
-            
-            table();
-          rates();
-            //del();
-            //CurrencyData();
+             
+              table();
+              rates();
+          //  del();
+           
           
              //ddata();
           
@@ -238,17 +238,25 @@ namespace CurrencyConverter
 
                     
                     CurrencyData();
+                    foreach (var va in val)
+                    {
+
+
+                        list.Items.Add("  " + va.C_Name + "  <===========>  " + va.value);
+
+                    }
                     
                 }
                 else
                 {
                     foreach (var va in val)
                     {
-                
+
 
                         list.Items.Add("  " + va.C_Name + "  <===========>  " + va.value);
 
                     }
+                    
                 }
             }
             catch (Exception er)
