@@ -45,7 +45,7 @@
 
         <TextBlock Text="Currency Converter" FontFamily="Calibri" FontSize="35" Margin="78,44,450,0" HorizontalAlignment="Center" FontWeight="Medium" Foreground="Cornsilk" Grid.RowSpan="12" Grid.Column="5" Width="309" Grid.Row="0"></TextBlock>
         <TextBlock Text="Forex Rates:" Grid.Column="1" Grid.Row="1" FontSize="29" Margin="20" Grid.ColumnSpan="4" Grid.RowSpan="11"></TextBlock>
-        <ListView Name="list" FontSize="35" Foreground="Azure" Width="300" Height="400" Grid.ColumnSpan="2" Grid.Column="2" Margin="10,10,34,88" Grid.Row="2" Grid.RowSpan="11">
+        <ListView Name="list" FontSize="35" Foreground="Azure" Width="300" Height="400" Grid.ColumnSpan="2" Grid.Column="2" Margin="10,10,34,88" Grid.Row="2" Grid.RowSpan="11" SelectionChanged="list_SelectionChanged">
         
         </ListView>
 

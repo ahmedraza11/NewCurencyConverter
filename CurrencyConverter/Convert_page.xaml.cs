@@ -15,6 +15,7 @@ using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using Windows.Storage;
 using Windows.UI.Popups;
+using Windows.Media.SpeechSynthesis;
 using SQLite;
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -40,8 +41,9 @@ namespace CurrencyConverter
             this.InitializeComponent();
             
             table();
-           rates();
-           //CurrencyData();
+          rates();
+            //del();
+            //CurrencyData();
           
              //ddata();
           
@@ -57,6 +59,7 @@ namespace CurrencyConverter
         private async void ddata()
         {
             num = await con.ExecuteAsync("select * from currency where value >= 1;");
+
             MessageDialog msg = new MessageDialog("This is total number of data into currency table", num.ToString());
             await msg.ShowAsync();
 
@@ -216,6 +219,12 @@ namespace CurrencyConverter
             //}
             
         }
+        public async void del()
+        {
+            await con.QueryAsync<currency>("delete from currency where value>0;");
+            MessageDialog da = new MessageDialog("", "Data has been deleted");
+            await da.ShowAsync();
+        }
         public async void rates()
         {
 
@@ -223,11 +232,23 @@ namespace CurrencyConverter
             try
             {
                 var val = await con.QueryAsync<currency>("select * from currency;");
-                foreach (var va in val)
-                {
-                    
-                    list.Items.Add("  "+va.C_Name + "  <===========>  " + va.value);
 
+                if (val.Count < 1)
+                {
+
+                    
+                    CurrencyData();
+                    
+                }
+                else
+                {
+                    foreach (var va in val)
+                    {
+                
+
+                        list.Items.Add("  " + va.C_Name + "  <===========>  " + va.value);
+
+                    }
                 }
             }
             catch (Exception er)
@@ -237,9 +258,14 @@ namespace CurrencyConverter
             }
         }
 
-        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        private async void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void list_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
      }
  }

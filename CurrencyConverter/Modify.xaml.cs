@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Media.SpeechSynthesis;
 using Windows.Storage;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
@@ -40,7 +41,7 @@ namespace CurrencyConverter
             await con.CreateTableAsync<currency>();
 
         }
-        private void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private async void ListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             int index = lst.SelectedIndex;
 
@@ -87,7 +88,8 @@ namespace CurrencyConverter
                 cur_Name = "Darham";
                 break;
             
-            
+           
+          
             }
            
         }
@@ -126,12 +128,19 @@ namespace CurrencyConverter
             {
                 float value = float.Parse(txt_value.Text);
                 await con.QueryAsync<currency>("Update currency set value = " + value + " where C_Name='" + cur_Name + "';");
+                var syn = new SpeechSynthesizer();
+                SpeechSynthesisStream stream = await syn.SynthesizeTextToStreamAsync(" Currency Updated!" + cur_Name + " Sucessfully Updated");
+                MediaElement ele = new MediaElement();
+                ele.SetSource(stream, stream.ContentType);
+                ele.Play();
+
                 MessageDialog da = new MessageDialog("(" + cur_Name + ") Sucessfully Updated.", "Currency Update");
                 await da.ShowAsync();
                 rate();
             }
             catch (Exception err)
             {
+
                 MessageDialog dra = new MessageDialog("Some Error acured please set value in Float", err.Message);
                 dra.ShowAsync();
             }

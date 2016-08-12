@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.Media.SpeechSynthesis;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -65,7 +66,8 @@ namespace CurrencyConverter
 
             };
             display.DataContext = da;
-        }
+        
+}
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -75,6 +77,11 @@ namespace CurrencyConverter
 
         private async void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            var syn = new SpeechSynthesizer();
+            SpeechSynthesisStream stream = await syn.SynthesizeTextToStreamAsync("ThankYou For Using Currency Converter pro.");
+            MediaElement element = new MediaElement();
+            element.SetSource(stream, stream.ContentType);
+            element.Play();
             MessageDialog da = new MessageDialog("","ThankYou For Using Currency Converter pro.");
             await  da.ShowAsync();
             App.Current.Exit();
